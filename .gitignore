@@ -1,0 +1,5 @@
+build/
+*.csv
+__pycache__/
+.settings/
+*_R*_Qb*.png
