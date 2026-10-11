@@ -119,6 +119,17 @@ After the shake at ~13 s, the complementary filter (α = 0.98) needs about 3 s t
 - Full 3-D attitude (quaternion, e.g. Mahony/Madgwick) instead of independent roll/pitch filters.
 - Dynamic ground truth by mounting the IMU on a motor shaft with an encoder (e.g. an ODrive axis).
 
+## Sample data
+
+| File | Content |
+|---|---|
+| `data/shake_v2.csv` | Raw MCU output: time, gyro rates, accel and Kalman roll/pitch (milli-units), filter execution time, I2C error count |
+| `data/shake_v2_roll.csv` | Roll axis converted to SI units, ready for `kalman_sim.py` |
+
+```bash
+python tools/kalman_sim.py data/shake_v2_roll.csv
+```
+
 ## Usage
 
 ```bash
