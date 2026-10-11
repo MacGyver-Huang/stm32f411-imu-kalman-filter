@@ -1,5 +1,7 @@
 build/
 *.csv
+!data/*.csv
 __pycache__/
 .settings/
+picture/
 *_R*_Qb*.png
